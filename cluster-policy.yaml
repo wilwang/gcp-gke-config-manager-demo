@@ -14,7 +14,7 @@ spec:
   parameters:
     ranges:
     - max_replicas: 5
-      min_replicas: 2
+      min_replicas: 3
 ---
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sRequiredLabels

@@ -1,0 +1,31 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sReplicaLimits
+metadata:
+  name: nginx-1-replica-limits
+spec:
+  # comment out or change action to `deny` for enforcement
+  enforcementAction: dryrun
+  match:
+    kinds:
+    - Deployment
+  parameters:
+    ranges:
+        max_replicas: 5
+        min_replicas: 2
+    message: All deployments can only have between 2 and 5 replicas
+---
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sRequiredLabels
+metadata:
+  name: must-have-owner-label
+spec:
+  # comment out or change action to `deny` for enforcement
+  enforcementAction: dryrun
+  match:
+    kinds:
+    - Namespace
+  parameters:
+    labels:
+      - allowedRegex: ^[a-zA-Z]+.wilwang.sandbox$
+        key: owner
+    message: All namespaces must have an `owner` label that points to the project name

@@ -6,8 +6,7 @@ spec:
   # change action to `deny` for enforcement, `dryrun` for monitoring w/o blocking, `warn` for monitoring with immediate message about violations
   enforcementAction: dryrun
   match:
-    excludedNamespaces:
-    - ["kube-*", "config-management-*", "gatekeeper-system", "resource-group-system", "poco-trial"]
+    excludedNamespaces: ["kube-*", "config-management-*", "gatekeeper-system", "resource-group-system", "poco-trial"]
     kinds:
     - apiGroups:
       - ""
@@ -26,8 +25,7 @@ spec:
   # change action to `deny` for enforcement, `dryrun` for monitoring w/o blocking, `warn` for monitoring with immediate message about violations
   enforcementAction: dryrun
   match:
-    excludedNamespaces:
-    - ["kube-*", "config-management-*", "gatekeeper-system", "resource-group-system", "poco-trial"]
+    excludedNamespaces: ["kube-*", "config-management-*", "gatekeeper-system", "resource-group-system", "poco-trial"]
     kinds:
     - apiGroups:
       - ""

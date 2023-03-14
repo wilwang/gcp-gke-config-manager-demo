@@ -15,7 +15,6 @@ spec:
     ranges:
     - max_replicas: 5
       min_replicas: 2
-    message: All deployments can only have between 2 and 5 replicas
 ---
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sRequiredLabels

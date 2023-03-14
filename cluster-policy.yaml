@@ -9,7 +9,7 @@ spec:
     excludedNamespaces: ["kube-*", "config-management-*", "gatekeeper-system", "resource-group-system", "poco-trial"]
     kinds:
     - apiGroups:
-      - ""
+      - apps
       kinds:
       - Deployment
   parameters:

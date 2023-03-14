@@ -7,7 +7,7 @@ spec:
   enforcementAction: dryrun
   match:
     excludedNamespaces:
-    - [kube-*,config-management-*,gatekeeper-system,resource-group-system,poco-trial]
+    - ["kube-*", "config-management-*", "gatekeeper-system", "resource-group-system", "poco-trial"]
     kinds:
     - apiGroups:
       - ""
@@ -27,7 +27,7 @@ spec:
   enforcementAction: dryrun
   match:
     excludedNamespaces:
-    - [kube-*,config-management-*,gatekeeper-system,resource-group-system,poco-trial]  
+    - ["kube-*", "config-management-*", "gatekeeper-system", "resource-group-system", "poco-trial"]
     kinds:
     - apiGroups:
       - ""

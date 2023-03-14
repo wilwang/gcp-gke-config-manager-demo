@@ -7,7 +7,10 @@ spec:
   enforcementAction: dryrun
   match:
     kinds:
-    - Deployment
+    - apiGroups:
+      - apps
+      kinds:
+      - Deployment
   parameters:
     ranges:
     - max_replicas: 5
@@ -23,7 +26,10 @@ spec:
   enforcementAction: dryrun
   match:
     kinds:
-    - Namespace
+    - apiGroups:
+      - ""
+      kinds:
+      - Namespace
   parameters:
     labels:
      - allowedRegex: ^[a-zA-Z]+.wilwang.sandbox$

@@ -4,7 +4,7 @@ metadata:
   name: replicas-min-max-range
 spec:
   # change action to `deny` for enforcement, `dryrun` for monitoring w/o blocking, `warn` for monitoring with immediate message about violations
-  enforcementAction: dryrun
+  enforcementAction: deny
   match:
     excludedNamespaces: ["kube-*", "config-management-*", "gatekeeper-system", "resource-group-system", "poco-trial"]
     kinds:

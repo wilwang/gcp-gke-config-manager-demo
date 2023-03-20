@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   name: demo-nginx
   labels:
-    owner: configmanager.wilwang.sandbox
+    owner: acm.wilwang.sandbox
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -13,7 +13,7 @@ metadata:
   labels:
     app: nginx-1
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: nginx-1
@@ -26,7 +26,6 @@ spec:
       - name: nginx-1
         image: nginx:latest
         ports:
-        - containerPort: 443
         - containerPort: 80
 ---
 apiVersion: v1

@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   name: demo-nginx
   labels:
-    owner: config-manager.wilwang.sandbox
+    owner: configmanager.wilwang.sandbox
 ---
 apiVersion: apps/v1
 kind: Deployment
